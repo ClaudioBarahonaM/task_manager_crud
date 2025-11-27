@@ -1,1 +1,90 @@
 esta es una prueba
+
+
+este comentario lo agregue en local en la rama claudio
+
+esto se debe import en postman
+
+{
+"info": {
+"name": "Task Manager API",
+"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+"_postman_id": "abcd1234-ef56-7890-abcd-1234567890ab"
+},
+"item": [
+{
+"name": "Get All Tasks",
+"request": {
+"method": "GET",
+"header": [],
+"url": {
+"raw": "http://localhost:8080/api/tasks",
+"protocol": "http",
+"host": ["localhost"],
+"port": "8080",
+"path": ["api", "tasks"]
+}
+}
+},
+{
+"name": "Create Task",
+"request": {
+"method": "POST",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"title\": \"Write blog post\",\n  \"description\": \"Create a Spring Boot tutorial\",\n  \"completed\": false\n}"
+},
+"url": {
+"raw": "http://localhost:8080/api/tasks",
+"protocol": "http",
+"host": ["localhost"],
+"port": "8080",
+"path": ["api", "tasks"]
+}
+}
+},
+{
+"name": "Update Task",
+"request": {
+"method": "PUT",
+"header": [
+{
+"key": "Content-Type",
+"value": "application/json"
+}
+],
+"body": {
+"mode": "raw",
+"raw": "{\n  \"title\": \"Updated title\",\n  \"description\": \"Updated description\",\n  \"completed\": true\n}"
+},
+"url": {
+"raw": "http://localhost:8080/api/tasks/1",
+"protocol": "http",
+"host": ["localhost"],
+"port": "8080",
+"path": ["api", "tasks", "1"]
+}
+}
+},
+{
+"name": "Delete Task",
+"request": {
+"method": "DELETE",
+"header": [],
+"url": {
+"raw": "http://localhost:8080/api/tasks/1",
+"protocol": "http",
+"host": ["localhost"],
+"port": "8080",
+"path": ["api", "tasks", "1"]
+}
+}
+}
+]
+}
